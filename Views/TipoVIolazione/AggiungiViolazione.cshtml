@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "AggiungiViolazione";
+}
+
+<div class="container">
+    <h1 class="text-center">Inserisci Violazione</h1>
+
+    <div class="text-center mt-3 mb-3">
+        <a href="@Url.Action("ListaViolazioni", "Violazione")" class="btn btn-primary">Lista delle violazioni</a>
+    </div>
+
+    <form action="@Url.Action("AggiungiViolazione", "Violazione")" method="post">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+
+                <div class="form-group">
+                    <h6 class="text-center">Descrizione</h6>
+                    <input type="text" name="Descrizione" class="form-control" required />
+                    <span class="text-danger">Questo campo è obbligatorio</span>
+                </div>
+
+                <div class="text-center mt-3">
+                    <button type="submit" class="btn btn-success">Aggiungi Violazione</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

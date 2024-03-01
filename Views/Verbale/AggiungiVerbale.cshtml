@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "AggiungiVerbale";
+}
+<div class="container">
+    <h2 class="text-center">Inserisci Verbale</h2>
+    <div class="text-center mt-3 mb-3">
+        <a href="@Url.Action("ListaVerbali", "Verbale")" class="btn btn-primary">Lista dei verbali</a>
+    </div>
+    <form action="@Url.Action("AggiungiVerbale", "Verbale")" method="post">
+        <input type="hidden" name="IdViolazione" value="@Model.IdViolazione" />
+
+        <div class="justify-content-center container">
+            <div class="d-flex flex-column align-items-center">
+                <span class="text-danger" id="validationSummary"></span>
+                <div class="d-flex justify-content-center">
+                    <div class="form-group">
+                        <h6>Tipo Violazione</h6>
+                        <select name="IdViolazione" class="form-control">
+                            <option value="">Seleziona una violazione</option>
+                        </select>
+                        <span class="text-danger" id="idViolazioneError"></span>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="form-group mx-3 mb-3">
+                        <h6>Data Violazione</h6>
+                        <input type="text" name="DataViolazione" class="form-control" />
+                        <span class="text-danger" id="dataViolazioneError"></span>
+                    </div>
+                    <div class="form-group">
+                        <h6>Indirizzo Violazione</h6>
+                        <input type="text" name="IndirizzoViolazione" class="form-control" />
+                        <span class="text-danger" id="indirizzoViolazioneError"></span>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="form-group mx-3 mb-3">
+                        <h6>Nominativo Agente</h6>
+                        <input type="text" name="Nominativo_Agente" class="form-control" />
+                        <span class="text-danger" id="nominativoAgenteError"></span>
+                    </div>
+                    <div class="form-group">
+                        <h6>Data Trascrizione Verbale</h6>
+                        <input type="text" name="DataTrascrizioneVerbale" class="form-control" />
+                        <span class="text-danger" id="dataTrascrizioneVerbaleError"></span>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="form-group mx-3 mb-3">
+                        <h6>Importo</h6>
+                        <input type="text" name="Importo" class="form-control" />
+                        <span class="text-danger" id="importoError"></span>
+                    </div>
+                    <div class="form-group">
+                        <h6>Punti Decurtati</h6>
+                        <input type="text" name="DecurtamentoPunti" class="form-control" />
+                        <span class="text-danger" id="decurtamentoPuntiError"></span>
+                    </div>
+                </div>
+                <div class="text-center mt-3">
+                    <button type="submit" class="btn btn-success">Aggiungi verbale</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

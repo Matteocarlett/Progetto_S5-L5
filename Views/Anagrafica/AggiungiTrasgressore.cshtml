@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "AggiungiTrasgressore";
+}
+
+<div class="container">
+    <h1 class="text-center">Aggiungi Persona</h1>
+    <form asp-controller="Anagrafica" asp-action="AggiungiTrasgressore" method="post">
+        <div class="mb-3">
+            <label for="Nome" class="form-label">Nome:</label>
+            <input type="text" id="Nome" name="Nome" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="Cognome" class="form-label">Cognome:</label>
+            <input type="text" id="Cognome" name="Cognome" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="Indirizzo" class="form-label">Indirizzo:</label>
+            <input type="text" id="Indirizzo" name="Indirizzo" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label for="città" class="form-label">Città:</label>
+            <input type="text" id="Città" name="Città" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label for="Cap" class="form-label">CAP:</label>
+            <input type="text" id="CAP" name="CAP" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label for="CodFisc" class="form-label">Codice Fiscale:</label>
+            <input type="text" id="Cod_Fisc" name="Cod_Fisc" class="form-control">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Aggiungi</button>
+    </form>
+</div>

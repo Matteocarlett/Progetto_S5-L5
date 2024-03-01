@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "ModificaVerbale";
+}
+<h2>Modifica Verbale</h2>
+<form action="@Url.Action("SalvaModifiche", "Verbale")" method="post">
+    <input type="hidden" name="IdVerbale" value="@Model.IdVerbale" />
+    <input type="hidden" name="IdViolazione" value="@Model.IdViolazione" />
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <hr />
+        <span class="text-danger" id="validationSummary"></span>
+        <div class="form-group">
+            <h6>Data Violazione</h6>
+            <input type="text" name="DataViolazione" class="form-control" value="@Model.DataViolazione" />
+            <span class="text-danger" id="dataViolazioneError"></span>
+        </div>
+        <div class="form-group">
+            <h6>Indirizzo Violazione</h6>
+            <input type="text" name="IndirizzoViolazione" class="form-control" value="@Model.IndirizzoViolazione" />
+            <span class="text-danger" id="indirizzoViolazioneError"></span>
+        </div>
+        <div class="form-group">
+            <h6>Nominativo Agente</h6>
+            <input type="text" name="Nominativo_Agente" class="form-control" value="@Model.Nominativo_Agente" />
+            <span class="text-danger" id="nominativoAgenteError"></span>
+        </div>
+        <div class="form-group">
+            <h6>Data Trascrizione Verbale</h6>
+            <input type="text" name="DataTrascrizioneVerbale" class="form-control" value="@Model.DataTrascrizioneVerbale" />
+            <span class="text-danger" id="dataTrascrizioneVerbaleError"></span>
+        </div>
+        <div class="form-group">
+            <h6>Importo</h6>
+            <input type="text" name="Importo" class="form-control" value="@Model.Importo" />
+            <span class="text-danger" id="importoError"></span>
+        </div>
+        <div class="form-group">
+            <h6>Punti Decurtati</h6>
+            <input type="text" name="DecurtamentoPunti" class="form-control" value="@Model.DecurtamentoPunti" />
+            <span class="text-danger" id="decurtamentoPuntiError"></span>
+        </div>
+        <div class="form-group">
+            <h6>Id Violazione</h6>
+            <input type="text" name="IdViolazione" class="form-control" value="@Model.IdViolazione" />
+            <span class="text-danger" id="idViolazioneError"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Salva" class="btn btn-warning mt-3" />
+        </div>
+    </div>
+</form>
