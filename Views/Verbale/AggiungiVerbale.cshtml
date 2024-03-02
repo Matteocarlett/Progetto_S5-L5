@@ -1,14 +1,10 @@
 ﻿@{
-    ViewBag.Title = "AggiungiVerbale";
+    ViewData["Title"] = "AggiungiVerbale";
 }
-<div class="container">
-    <h2 class="text-center">Inserisci Verbale</h2>
-    <div class="text-center mt-3 mb-3">
-        <a href="@Url.Action("ListaVerbali", "Verbale")" class="btn btn-primary">Lista dei verbali</a>
-    </div>
-    <form action="@Url.Action("AggiungiVerbale", "Verbale")" method="post">
-        <input type="hidden" name="IdViolazione" value="@Model.IdViolazione" />
 
+<div class="container">
+    <h1 class="text-center">Inserisci Verbale</h1>
+    <form asp-controller="Verbale" asp-action="AggiungiVerbale" method="post">
         <div class="justify-content-center container">
             <div class="d-flex flex-column align-items-center">
                 <span class="text-danger" id="validationSummary"></span>
@@ -17,10 +13,19 @@
                         <h6>Tipo Violazione</h6>
                         <select name="IdViolazione" class="form-control">
                             <option value="">Seleziona una violazione</option>
+                            <option value="1">Eccesso di velocità</option>
+                            <option value="2">Occupazione abusiva di suolo pubblico</option>
+                            <option value="3">Consumo non autorizzato in area pubblica</option>
+                            <option value="4">Mancata esposizione del ticket di parcheggio</option>
+                            <option value="5">Attraversamento della strada in luogo non consentito</option>
+                            <option value="6">Mancato pagamento del biglietto del trasporto pubblico</option>
+                            <option value="7">Occupazione abusiva di suolo privato</option>
+                            <option value="8">Vendita di merce contraffatta</option>
                         </select>
                         <span class="text-danger" id="idViolazioneError"></span>
                     </div>
                 </div>
+
                 <div class="d-flex">
                     <div class="form-group mx-3 mb-3">
                         <h6>Data Violazione</h6>
@@ -58,7 +63,7 @@
                     </div>
                 </div>
                 <div class="text-center mt-3">
-                    <button type="submit" class="btn btn-success">Aggiungi verbale</button>
+                    <button type="submit" class="btn btn-primary">Aggiungi Verbale</button>
                 </div>
             </div>
         </div>

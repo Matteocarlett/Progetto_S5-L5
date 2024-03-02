@@ -8,7 +8,7 @@
             <h2 class="text-center">Lista delle violazioni</h2>
         </div>
         <div class="text-right mt-3 mb-3">
-            <a href="@Url.Action("AggiungiViolazione", "Violazione")" class="btn btn-primary">Aggiungi violazione</a>
+            <a href="@Url.Action("AggiungiViolazione", "TipoVIolazione")" class="btn btn-primary">Aggiungi violazione</a>
         </div>
     </div>
 
@@ -27,8 +27,8 @@
                     <td>@violazione.IdViolazione</td>
                     <td>@violazione.Descrizione</td>
                     <td class="d-flex justify-content-evenly">
-                        <a href="@Url.Action("ModificaViolazione", "Violazione", new { IdViolazione = violazione.IdViolazione })" class="btn btn-warning btn-sm">Modifica</a>
-                        <form action="@Url.Action("EliminaViolazione", "Violazione")" method="post">
+                        <a href="@Url.Action("ModificaViolazione", "TipoVIolazione", new { IdViolazione = violazione.IdViolazione })" class="btn btn-warning btn-sm">Modifica</a>
+                        <form action="@Url.Action("EliminaViolazione", "TipoVIolazione")" method="post">
                             <input type="hidden" name="IdViolazione" value="@violazione.IdViolazione" />
                             <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Sei sicuro di voler eliminare questa violazione?')">Elimina</button>
                         </form>
